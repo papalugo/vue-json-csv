@@ -204,6 +204,9 @@ export default {
         saveAs(blob, this.name);
       }
     }
+  },
+  mounted() {
+    EventBus.$on('START_EXPORT_GENERATE', this.generate());
   }
 };
 </script>
